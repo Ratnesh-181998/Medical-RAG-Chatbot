@@ -17,7 +17,7 @@ def load_llm(huggingface_repo_id: str = HUGGINGFACE_REPO_ID , hf_token:str = HF_
             openai_api_key=hf_token,
             openai_api_base="https://router.huggingface.co/v1",
             temperature=0.3,
-            max_tokens=256
+            max_tokens=2048
         )
 
         logger.info("LLM loaded sucesfully...")
