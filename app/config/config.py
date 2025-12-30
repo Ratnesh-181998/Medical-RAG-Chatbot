@@ -1,8 +1,14 @@
 import os
+import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
-HF_TOKEN = os.environ.get("HF_TOKEN")
+
+# Try to load from Streamlit secrets first, then environment variables
+if "HF_TOKEN" in st.secrets:
+    HF_TOKEN = st.secrets["HF_TOKEN"]
+else:
+    HF_TOKEN = os.environ.get("HF_TOKEN")
 
 HUGGINGFACE_REPO_ID="meta-llama/Meta-Llama-3-8B-Instruct"
 
