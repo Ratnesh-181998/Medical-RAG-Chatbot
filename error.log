@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\app\application.py", line 2, in <module>
+    from app.components.retriever import create_qa_chain
+  File "C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\app\components\retriever.py", line 4, in <module>
+    from app.components.llm import load_llm
+  File "C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\app\components\llm.py", line 1, in <module>
+    from langchain_huggingface import HuggingFaceEndpoint
+  File "C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\venv\Lib\site-packages\langchain_huggingface\__init__.py", line 1, in <module>
+    from langchain_huggingface.chat_models import (
+  File "C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\venv\Lib\site-packages\langchain_huggingface\chat_models\__init__.py", line 1, in <module>
+    from langchain_huggingface.chat_models.huggingface import (  # type: ignore[import-not-found]
+  File "C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\venv\Lib\site-packages\langchain_huggingface\chat_models\huggingface.py", line 20, in <module>
+    from langchain_core.language_models import (
+ImportError: cannot import name 'ModelProfile' from 'langchain_core.language_models' (C:\Users\rattu\Downloads\8_MEDICAL RAG CHATBOT\Local Run\CODE\venv\Lib\site-packages\langchain_core\language_models\__init__.py)

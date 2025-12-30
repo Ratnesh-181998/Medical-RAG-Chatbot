@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 AI Medical Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --user-msg-bg: #e0f2fe;
+            --ai-msg-bg: #ffffff;
+            --border-radius: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            margin: 1rem;
+        }
+
+        .banner {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1e40af;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        #chat-box {
+            height: 400px;
+            overflow-y: auto;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--border-radius);
+            background-color: #f1f5f9;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 1rem 1.25rem;
+            border-radius: var(--border-radius);
+            line-height: 1.5;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .user {
+            background-color: var(--primary-color);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .assistant {
+            background-color: var(--ai-msg-bg);
+            color: var(--text-color);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .role-label {
+            font-weight: 600;
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+            display: block;
+            opacity: 0.8;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            resize: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .send-btn {
+            background-color: var(--primary-color);
+            color: white;
+            flex: 1;
+        }
+
+        .send-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .clear-btn {
+            background-color: #ef4444;
+            color: white;
+            padding: 0.75rem 1.25rem;
+        }
+
+        .clear-btn:hover {
+            background-color: #dc2626;
+        }
+
+        .error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            border: 1px solid #fecaca;
+        }
+
+        /* Custom Scrollbar */
+        #chat-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #chat-box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #chat-box::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <img src="{{ url_for('static', filename='banner.png') }}" alt="Medical RAG Chatbot Banner" class="banner">
+        <h1>🔍 AI Medical Chatbot</h1>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <div id="chat-box">
+            {% if not messages %}
+            <div style="text-align: center; color: #64748b; margin-top: 2rem;">
+                <p>Welcome! Ask me any medical questions to get started.</p>
+            </div>
+            {% endif %}
+            {% for msg in messages %}
+            <div class="message {{ msg.role }}">
+                <span class="role-label">{{ msg.role|capitalize }}</span>
+                {{ msg.content | safe | nl2br }}
+            </div>
+            {% endfor %}
+        </div>
+
+        <form method="post" action="{{ url_for('index') }}">
+            <div class="input-wrapper">
+                <textarea name="prompt" placeholder="Ask a medical question..." required></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="send-btn">Send Message</button>
+                <a href="{{ url_for('clear') }}" style="text-decoration: none;">
+                    <button type="button" class="clear-btn">Clear Chat</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Auto-scroll to bottom of chat box
+        const chatBox = document.getElementById('chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+    </script>
+</body>
+
+</html>
