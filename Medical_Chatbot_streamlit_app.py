@@ -1005,21 +1005,21 @@ with tab4:
     
     st.markdown("### 📊 Interactive Logic Diagram")
     
-    # Using standard Markdown Mermaid support
-    st.markdown("""
-```mermaid
-graph TD
-    A[User Query] --> B(Embedding Model)
-    B --> C{FAISS Vector Store}
-    C -->|Top K Documents| D[Context Window]
-    A --> D
-    D --> E[Llama 3 LLM]
-    E --> F[Refined Medical Answer]
-    style A fill:#3498db,stroke:#fff,stroke-width:2px,color:#fff
-    style C fill:#f39c12,stroke:#fff,stroke-width:2px,color:#fff
-    style E fill:#2ecc71,stroke:#fff,stroke-width:2px,color:#fff
-```
-""")
+    import textwrap
+    st.markdown(textwrap.dedent("""
+        ```mermaid
+        graph TD
+            A[User Query] --> B(Embedding Model)
+            B --> C{FAISS Vector Store}
+            C -->|Top K Documents| D[Context Window]
+            A --> D
+            D --> E[Llama 3 LLM]
+            E --> F[Refined Medical Answer]
+            style A fill:#3498db,stroke:#fff,stroke-width:2px,color:#fff
+            style C fill:#f39c12,stroke:#fff,stroke-width:2px,color:#fff
+            style E fill:#2ecc71,stroke:#fff,stroke-width:2px,color:#fff
+        ```
+    """))
 
 
     st.markdown("---")
