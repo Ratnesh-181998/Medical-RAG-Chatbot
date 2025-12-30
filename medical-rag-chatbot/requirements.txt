@@ -1,0 +1,7 @@
+flask
+langchain
+faiss-cpu
+huggingface-hub
+sentence-transformers
+pypdf
+python-dotenv

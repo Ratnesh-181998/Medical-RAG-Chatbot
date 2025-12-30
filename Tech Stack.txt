@@ -1,0 +1,104 @@
+
+Tech Stack:
+1.	HuggingFace
+→ LLM and Embedding Model
+(Free, Mistral AI used as LLM)
+2.	FAISS
+→ Local Vector Store for storing your embeddings
+(Meta / Facebook AI Similarity Search)
+3.	LangChain
+→ Generative AI framework to interact with LLM
+4.	PyPDF
+→ Library for reading contents of a PDF file
+5.	Flask
+→ To build backend APIs for handling user requests
+6.	HTML / CSS
+→ To make UI or frontend of the app
+7.	Docker
+→ For containerization of the app during deployment
+8.	Aqua Trivy
+→ For scanning Docker images for security issues and vulnerabilities
+9.	Jenkins
+→ For making CI/CD pipelines
+10.	AWS Runner
+→ To deploy and run your app on cloud with ease and reliability
+→ It’s a service offered by AWS
+11.	GitHub
+→ It will work as a SCM for your project
+________________________________________
+Embedding & Vector Flow (Concept Explanation):
+•	Docs
+→ Embedding Model
+→ Embeddings
+→ Vector Store
+→ Similarity Search
+________________________________________
+Backend & Frontend Interaction Example:
+•	Backend (Flask):
+o	If age ≥ 18 → return eligible
+o	Else → not eligible
+•	Frontend (HTML/CSS):
+o	User enters age (example: 18)
+o	Output → Eligible
+________________________________________
+Security Scanning with Trivy (Docker Image):
+•	Trivy → Security Scanner (Docker Image)
+•	Detects vulnerabilities
+•	Finds weaknesses / flaws in Docker containers
+•	These flaws can be exploited by hackers for unauthorized access
+Example:
+•	App → Flask = 2.0.1
+→ Security bugs found
+•	Flask ≤ 2.1.0
+→ No security bugs
+•	Trivy output:
+o	Warning message → security bugs
+o	Suggests upgrading Flask (2.0.1 → 2.1.0)
+________________________________________
+LLM and Retrieval Layer:
+1.	LLM Setup Code
+2.	Setup Mistral AI Model
+3.	Retriever Code
+4.	Create Retriever for Application
+________________________________________
+Application Layer:
+1.	Main Application Code
+2.	Flask Backend
+3.	HTML CSS Frontend
+________________________________________
+Versioning and Deployment Pipeline:
+1.	Code Versioning with GitHub
+2.	Dockerfile Creation
+3.	Jenkins Setup for CI/CD
+4.	GitHub Integration with Jenkins
+5.	Build and Scan with Aqua Trivy
+6.	Push to AWS ECR
+7.	Deployment to AWS Runner
+(Handled via Jenkins CI/CD Pipeline)
+________________________________________
+Project Setup and Configuration:
+1.	Project and API Setup
+2.	Virtual Environment and Logging Setup
+3.	Custom Exception Files and Project Structure
+4.	Configuration Code
+5.	Access Environment Variables
+________________________________________
+Data Processing and Storage:
+1.	PDF Loader Code
+2.	Load PDF Data
+3.	Chunk Data with LangChain
+4.	Embeddings Code
+5.	Convert Chunks to Embeddings
+6.	Vector Store Code
+7.	Store Embeddings in FAISS
+8.	Data Loader Code
+9.	Combine Loader, Embeddings, Vector Store
+________________________________________
+Overall Architecture Layers:
+•	Project Setup and Configuration
+•	Data Processing and Storage
+•	LLM and Retrieval
+•	Application Layer
+•	Versioning and Deployment
+
+

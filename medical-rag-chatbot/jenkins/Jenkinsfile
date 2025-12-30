@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker build -t medical-rag-chatbot .'
+            }
+        }
+        stage('Security Scan') {
+            steps {
+                sh 'trivy image medical-rag-chatbot'
+            }
+        }
+    }
+}
