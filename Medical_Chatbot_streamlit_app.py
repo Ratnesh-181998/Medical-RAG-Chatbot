@@ -911,6 +911,7 @@ with tab3:
     st.markdown("### 🛠️ Technology Stack")
     st.markdown("A production-grade stack chosen for performance, scalability, and maintainability.")
     
+    # --- Existing Quick Summary (Preserved) ---
     col_t1, col_t2, col_t3 = st.columns(3)
     
     with col_t1:
@@ -935,8 +936,86 @@ with tab3:
         st.markdown("- **Aqua Trivy**: Security Scanning")
 
     st.markdown("---")
+
+    # --- NEW Interactive Detailed Section (From Tech Stack.txt) ---
+    st.subheader("📚 Detailed Component Deep Dive")
+    st.info("Click on the sections below to explore the detailed role of each technology.")
+
+    # 1. AI Core
+    with st.expander("🤖 1. AI Core (HuggingFace, FAISS, LangChain)"):
+        st.markdown("""
+        *   **HuggingFace**: Provides the **LLM and Embedding Model**. We use `Sentence Transformers` (Free, Mistral/Llama compatible) to convert text into numbers.
+        *   **FAISS (Facebook AI Similarity Search)**: The **Local Vector Store** for storing embeddings efficiently. It allows for lightning-fast similarity search to find relevant medical context.
+        *   **LangChain**: The **Generative AI Framework** that acts as the "Glue". It interacts with the LLM, manages the retrieval chain, and handles prompt engineering.
+        *   **PyPDF**: A lightweight library for reading the dense contents of the Medical Encyclopedia PDF file.
+        """)
+
+    # 2. Application Layer
+    with st.expander("💻 2. Application Layer (Flask, HTML/CSS, Streamlit)"):
+        st.markdown("""
+        *   **Flask / Streamlit**: Builds the **Backend APIs** and **Frontend UI**. It handles user requests, sessions, and routing.
+        *   **HTML / CSS**: Used within the app to render the polished UI, responsive layouts, and custom styling you see right now.
+        *   **Python**: The core logic language.
+        """)
+
+    # 3. Deployment & Security
+    with st.expander("🛡️ 3. Deployment & Security (Docker, Trivy, Jenkins, AWS)"):
+        st.markdown("""
+        *   **Docker**: Used for **Containerization**. It packages the app with all its dependencies so it runs exactly the same on your laptop, the CI server, and the Cloud.
+        *   **Aqua Trivy**: A **Security Scanner** for Docker images. It scans for vulnerabilities (CVEs) and issues warnings if libraries like `Flask` have known security bugs (e.g., suggesting an upgrade from 2.0.1 → 2.1.0).
+        *   **Jenkins**: The **CI/CD Automation Server**. It automatically builds the Docker image and runs tests whenever code is pushed to GitHub.
+        *   **AWS App Runner**: A fully managed service to **Deploy** the containerized app on the cloud with auto-scaling and reliability.
+        *   **GitHub**: The Source Code Management (SCM) system.
+        """)
+        
+    st.markdown("---")
     
-    st.markdown("### ☁️ DevOps & Cloud Architecture")
+    # --- NEW Workflows Section (Interactive Tabs) ---
+    st.subheader("🔄 System Workflows & Logic")
+    
+    flow_tab1, flow_tab2, flow_tab3 = st.tabs(["🧠 Embedding Flow", "🛡️ Security Scan", "🚀 CI/CD Pipeline"])
+    
+    with flow_tab1:
+        st.markdown("#### Embedding & Vector Flow")
+        st.caption("How text becomes searchable data:")
+        st.code("""
+Docs (PDF) 
+  → PyPDF Loader 
+  → Chunking 
+  → Embedding Model (HuggingFace) 
+  → Embeddings (Vectors) 
+  → Vector Store (FAISS) 
+  → Similarity Search (Query)
+        """, language="plaintext")
+
+    with flow_tab2:
+        st.markdown("#### Security Scanning with Trivy")
+        st.caption("Ensuring the container is safe from hackers:")
+        st.markdown("""
+        1.  **Docker Image** is built.
+        2.  **Trivy** scans the image layers.
+        3.  **Detects Vulnerabilities**: Finds weaknesses or outdated packages.
+        4.  **Reporting**:
+            *   *Example*: `Flask version 2.0.1` has a known bug.
+            *   *Trivy Output*: "Critical Severity - Upgrade to 2.1.0".
+        """)
+
+    with flow_tab3:
+        st.markdown("#### Versioning & Deployment Pipeline")
+        st.caption("From Code to Cloud:")
+        st.markdown("""
+        1.  **Code Versioning**: Push code to `GitHub`.
+        2.  **CI Trigger**: `Jenkins` detects the change.
+        3.  **Build**: Dockerfile creation.
+        4.  **Scan**: Build and scan image with `Aqua Trivy`.
+        5.  **Push**: Upload secure image to `AWS ECR`.
+        6.  **Deploy**: `AWS App Runner` pulls the new image and updates the live app.
+        """)
+
+    st.markdown("---")
+    
+    # --- Existing DevOps Visuals (Preserved) ---
+    st.markdown("### ☁️ DevOps & Cloud Architecture Visuals")
     
     devops_col1, devops_col2, devops_col3 = st.columns(3)
     
