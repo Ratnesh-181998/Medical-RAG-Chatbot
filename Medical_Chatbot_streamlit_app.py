@@ -173,19 +173,20 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📋 System Logs"
 ])
 
-# Loading the QA chain (Cached) - FIX: Use unique function to ensure cache stability
+# Loading the QA chain (Cached) - Renamed to force cache invalidation
 @st.cache_resource(show_spinner="Initializing Medical Intelligence Engine...")
-def get_rag_engine():
+def get_rag_chain_engine_v2():
     # Helper to load the chain.
-    # Note: Streamlit cache relies on function inputs/outputs pickling.
     if create_qa_chain:
         try:
             return create_qa_chain()
         except Exception as e:
+            # We cannot log to ST here, just return None or log using standard logger
+            print(f"Error initializing RAG Chain: {e}") 
             return None
     return None
 
-chain = get_rag_engine()
+chain = get_rag_chain_engine_v2()
 
 # --- TAB 1: DEMO ---
 with tab1:
