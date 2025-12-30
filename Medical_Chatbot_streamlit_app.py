@@ -1005,11 +1005,10 @@ with tab4:
     
     st.markdown("### 📊 Interactive Logic Diagram")
     
-    # Using textwrap.dedent logic by keeping string flush to left
+    # Using standard Markdown Mermaid support
     st.markdown("""
-<div style="background-color: white; padding: 20px; border-radius: 10px; color: black;">
-  <div class="mermaid">
-    graph TD
+```mermaid
+graph TD
     A[User Query] --> B(Embedding Model)
     B --> C{FAISS Vector Store}
     C -->|Top K Documents| D[Context Window]
@@ -1019,13 +1018,8 @@ with tab4:
     style A fill:#3498db,stroke:#fff,stroke-width:2px,color:#fff
     style C fill:#f39c12,stroke:#fff,stroke-width:2px,color:#fff
     style E fill:#2ecc71,stroke:#fff,stroke-width:2px,color:#fff
-  </div>
-</div>
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-</script>
-""", unsafe_allow_html=True)
+```
+""")
 
 
     st.markdown("---")
@@ -1144,7 +1138,7 @@ st.markdown("""
 <br><br>
 <div style="text-align: center; margin-top: 50px; padding: 20px; background-color: rgba(255,255,255,0.05); border-radius: 10px;">
     <p style="color: #bdc3c7; font-size: 0.9rem;">
-        Made with ❤️ by <b>Ratnesh Kumar Singh</b> | Powered by <b>Llama 3</b> & <b>RAG</b>
+        Made with ❤️ by <b>Ratnesh Kumar Singh | Data Scientist (AI/ML Engineer 4+Yrs Exp)</b> | Powered by <b> Llama 3</b> & <b>RAG</b>
     </p>
     <p style="font-size: 0.8rem; color: #7f8c8d;">
         &copy; 2025 All Rights Reserved. Not for medical diagnosis.
