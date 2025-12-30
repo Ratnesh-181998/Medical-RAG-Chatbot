@@ -54,9 +54,31 @@ Unlike standard chatbots, this system is grounded in **RAG (Retrieval-Augmented 
 *   **🎨 Premium UI/UX**: A polished Streamlit interface with a custom medical green theme, smooth transitions, and interactive components.
 
 ---
+
 ### Medical RAG System Architecture
 
 <img width="1117" height="585" alt="image" src="https://github.com/user-attachments/assets/72b5240c-87ba-4d85-80b3-30aa0d67fc9d" />
+
+---
+### Interactive Logic Diagram
+<img width="496" height="680" alt="image" src="https://github.com/user-attachments/assets/24f0d351-6fa5-4bc2-be17-408dc2999dd0" />
+
+---
+### Architecture Evolution
+- 📷 Architecture View 1 — Very Simple
+<img width="1200" height="504" alt="image" src="https://github.com/user-attachments/assets/b27bb53e-72c8-4839-8217-b51873911295" />
+- 📷 Architecture View 2 — Basic Rag Flow
+<img width="1218" height="633" alt="image" src="https://github.com/user-attachments/assets/6a4d91ad-01bc-4e9e-b05c-11add2b5a1e8" />
+-  Architecture View 3 – Rag With Embeddings
+<img width="1215" height="638" alt="image" src="https://github.com/user-attachments/assets/5ff22dcf-73f8-4415-9bdf-0db614023d9e" />
+-  Architecture View 4 — Full Application Architecture
+<img width="1199" height="647" alt="image" src="https://github.com/user-attachments/assets/45013360-ce71-44a6-b5ac-7c295bf02923" />
+- Architecture View 5 — With Memory (Chat History)
+<img width="1171" height="653" alt="image" src="https://github.com/user-attachments/assets/2ab084a2-79be-42f4-b903-40bfa6f2b5c3" />
+-  Architecture View 6 – Production + Devops
+<img width="1191" height="608" alt="image" src="https://github.com/user-attachments/assets/72060362-1970-4e30-9dbd-aa4a0be1dc19" />
+- Architecture View 7 — End-To-End (Best Final Diagram)
+<img width="1221" height="696" alt="image" src="https://github.com/user-attachments/assets/2a25467e-b30c-48f8-b17d-7ca3eaae336c" />
 
 ---
 ## 🏗️ System Architecture
@@ -71,6 +93,8 @@ The system follows a robust data pipeline:
 6.  **Generation**: Synthesizing the final answer using the LLM.
 
 ![System Architecture](architecture_images/Architecture%20View%207%20—%20End-to-End%20(Best%20Final%20Diagram).png)
+
+<img width="1095" height="719" alt="image" src="https://github.com/user-attachments/assets/d595d389-1c37-447d-84d7-6cbca0555d30" />
 
 *(See the **Architecture** tab in the app for an interactive deep dive into each component.)*
 
