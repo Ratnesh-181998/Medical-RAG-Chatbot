@@ -28,7 +28,11 @@
 - [🤝 Contributing](#-contributing)
 - [📜 License](#-license)
 - [📞 Contact](#-contact)
-
+---
+## 🌐🎬 Live Demo
+🚀 **Try it now:**
+- **Streamlit Profile** -[[Link]](https://share.streamlit.io/user/ratnesh-181998)
+- **Project Demo** - [[Medical ChatBot Link]](https://medical-rag-chatbot-a7zyhffk6df9nqyek9jb5u.streamlit.app/)
 ---
 
 ## ✨ Introduction
@@ -191,7 +195,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ### Project Links
 
-- 🌐 **Live Demo**: [Streamlit App](https://appudtzei3tyyttd6xjhwur.streamlit.app/)
+- 🌐 **Live Demo**: [Streamlit App](https://medical-rag-chatbot-a7zyhffk6df9nqyek9jb5u.streamlit.app/)
 - 📖 **Documentation**: [GitHub Wiki](https://github.com/Ratnesh-181998/Medical-RAG-Chatbot/wiki)
 - 🐛 **Issue Tracker**: [GitHub Issues](https://github.com/Ratnesh-181998/Medical-RAG-Chatbot/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/Ratnesh-181998/Medical-RAG-Chatbot/discussions)
