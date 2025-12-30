@@ -1,4 +1,5 @@
 # 🏥 Medical RAG Chatbot: Advanced AI Health Assistant
+<img width="940" height="445" alt="image" src="https://github.com/user-attachments/assets/d225cd28-e180-4d04-a528-788a8d836acb" />
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://appudtzei3tyyttd6xjhwur.streamlit.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
