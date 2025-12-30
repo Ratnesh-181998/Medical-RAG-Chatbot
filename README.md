@@ -96,29 +96,63 @@ The main interface where users interact with the AI.
 - **Answer Display**: Receive detailed, AI-generated responses.
 - **Reference Context**: Expandable section showing the raw source text used for the answer.
 - **Metrics**: Real-time display of execution time and confidence.
+<img width="1873" height="691" alt="image" src="https://github.com/user-attachments/assets/ebd02ea8-fa21-47ed-9496-3f8f55178cf1" />
+<img width="1771" height="764" alt="image" src="https://github.com/user-attachments/assets/0c39dd8c-2888-403a-814a-1d2cfe3e6c87" />
+<img width="1821" height="722" alt="image" src="https://github.com/user-attachments/assets/1cf52ca5-3026-4dd0-a0b1-0f94d792edb9" />
+<img width="1739" height="757" alt="image" src="https://github.com/user-attachments/assets/b9b2bd5d-0574-4f9b-b1cc-d558133f6756" />
+<img width="1840" height="699" alt="image" src="https://github.com/user-attachments/assets/017dfe4b-0abd-4fe9-978b-cec2336b806f" />
+<img width="1838" height="738" alt="image" src="https://github.com/user-attachments/assets/56e48429-bb34-4299-9f10-d72ddbab3566" />
+<img width="1867" height="655" alt="image" src="https://github.com/user-attachments/assets/bd22c624-6369-4bf5-ab35-5d32b62a76d2" />
 
 ### 2. 📖 About Project
 A detailed overview of the project's mission.
 - Explains the "Why" and "How" of Medical RAG.
 - Highlights the datasets used (Gale Encyclopedia of Medicine).
 - outlines the solution approach.
+<img width="1787" height="764" alt="image" src="https://github.com/user-attachments/assets/02d473ed-6b20-4078-8698-ee51267c6831" />
+<img width="1519" height="636" alt="image" src="https://github.com/user-attachments/assets/787c82c5-b196-4c7e-80e9-2453a8c12183" />
+<img width="1506" height="648" alt="image" src="https://github.com/user-attachments/assets/4d31dce2-f668-4011-9160-50cb463da79c" />
+<img width="1484" height="686" alt="image" src="https://github.com/user-attachments/assets/2492e3db-c5ac-4f51-aa2e-f959b8999f2c" />
+<img width="1424" height="719" alt="image" src="https://github.com/user-attachments/assets/e56823b7-0d7d-40c3-a1e8-8bd1ecb4f682" />
+<img width="1318" height="688" alt="image" src="https://github.com/user-attachments/assets/f1dab6c6-db0a-46ca-a582-66222ef1eba7" />
+<img width="1193" height="591" alt="image" src="https://github.com/user-attachments/assets/a175a8f5-ecba-4b0e-a74f-201150d177f0" />
+<img width="1362" height="636" alt="image" src="https://github.com/user-attachments/assets/7dc54f60-3f2e-4dfe-8417-e78b34c9b865" />
+<img width="711" height="756" alt="image" src="https://github.com/user-attachments/assets/1ba60686-349f-4a3e-8dc1-72b3814a120c" />
+<img width="1429" height="700" alt="image" src="https://github.com/user-attachments/assets/52060ba3-239c-477e-bcfc-fc924705a2b1" />
+<img width="1376" height="582" alt="image" src="https://github.com/user-attachments/assets/69febed3-e4bc-456a-b995-26fe3e85f00c" />
+<img width="1234" height="760" alt="image" src="https://github.com/user-attachments/assets/025deb1e-9885-47b1-a4fb-c1ebea96493d" />
+<img width="1392" height="566" alt="image" src="https://github.com/user-attachments/assets/093cd92e-00bc-42f9-9797-fc9d46cb6a6d" />
 
 ### 3. 🛠 Tech Stack
 Visual representation of the technologies used.
 - Cards for **LLM**, **Vector Store**, **DevOps**, and **Frontend**.
 - Explains the role of Docker, Jenkins, and AWS in the deployment pipeline.
+<img width="1421" height="694" alt="image" src="https://github.com/user-attachments/assets/513ba69b-fc19-4ab8-80d3-99fed02797d2" />
+<img width="1390" height="753" alt="image" src="https://github.com/user-attachments/assets/94307c21-17a8-49aa-b8e2-aca6998d1d2b" />
+<img width="1470" height="738" alt="image" src="https://github.com/user-attachments/assets/5bd51156-3623-428c-a023-0dbc767025eb" />
+<img width="1330" height="735" alt="image" src="https://github.com/user-attachments/assets/a21a2a0f-5602-498f-b431-687907938e73" />
+<img width="1467" height="689" alt="image" src="https://github.com/user-attachments/assets/15ef105f-e4bf-480e-8fef-97f03f737a39" />
+<img width="1478" height="716" alt="image" src="https://github.com/user-attachments/assets/90fdc4ec-c5ca-4f99-820c-e55a3435a735" />
 
 ### 4. 🏛 Architecture
 An educational hub for developers.
 - **Interactive Flowcharts**: Visualizing the data journey from PDF to Answer.
 - **Component Deep Dive**: Tabs explaining **Ingestion**, **Embedding**, and **Generation** with code snippets.
 - **Evolution**: A gallery showing how the architecture evolved from MVP to Production.
+<img width="1518" height="684" alt="image" src="https://github.com/user-attachments/assets/674d6ea0-9a89-448e-beb8-746b489808cb" />
+<img width="1353" height="758" alt="image" src="https://github.com/user-attachments/assets/e76e9dad-d6ae-45a1-827d-4397ce02eae5" />
+<img width="1439" height="720" alt="image" src="https://github.com/user-attachments/assets/aadefa22-d006-4f4d-bdc8-97f79d5cfb8b" />
+<img width="1473" height="544" alt="image" src="https://github.com/user-attachments/assets/176aa7e3-47ec-4b81-9bcb-bd9265814b2f" />
+<img width="1565" height="593" alt="image" src="https://github.com/user-attachments/assets/7aa8b039-1dd5-45ad-b14c-c2f2ffd143e6" />
 
 ### 5. 🖥️ System Health & Logs
 A dashboard for administrators.
 - **Status Indicators**: Green/Red lights for App, Vector Store, and LLM connectivity.
 - **Live Logs**: Scrollable, filterable logs showing system activities and errors.
 - **Download**: Export logs for external analysis.
+<img width="1502" height="693" alt="image" src="https://github.com/user-attachments/assets/a9eaf851-e974-4b96-86cb-edee26a69bf4" />
+<img width="1420" height="703" alt="image" src="https://github.com/user-attachments/assets/54827a91-5201-4dc1-8d9d-a756ea13c258" />
+<img width="1426" height="745" alt="image" src="https://github.com/user-attachments/assets/0e91d3cf-b36b-46fa-8db2-954645409d26" />
 
 ---
 
