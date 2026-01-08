@@ -39,6 +39,13 @@
 
 ---
 
+### 🎬 Live Project Demo
+> Experience the full flow:
+
+![Project Demo Walkthrough](Medical_RAG_Complete_Walkthrough.gif)
+
+---
+
 ## ✨ Introduction
 
 The **Medical RAG Chatbot** is a state-of-the-art AI application built to bridge the gap between complex medical documentation and accessible, user-friendly health queries. By leveraging **Llama-3 (via Hugging Face)** for reasoning and **FAISS** for fast similarity search, this system ingests medical PDFs (e.g., "The Gale Encyclopedia of Medicine"), understands user questions, and retrieves precise, context-aware answers.
